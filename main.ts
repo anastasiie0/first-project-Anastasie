@@ -17,7 +17,13 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 let Ball: game.LedSprite = null
+music.play(music.stringPlayable("C5 B C5 B G C5 A C5 ", 120), music.PlaybackMode.LoopingInBackground)
+basic.showString("Press A when ball at edge")
 game.setScore(0)
+basic.showNumber(3)
+basic.showNumber(2)
+basic.showNumber(1)
+basic.showNumber(0)
 Ball = game.createSprite(0, 2)
 for (let index = 0; index < 180; index++) {
     Ball.move(1)
@@ -26,5 +32,5 @@ for (let index = 0; index < 180; index++) {
 }
 game.gameOver()
 basic.forever(function () {
-    music.play(music.stringPlayable("C5 B A B C5 B A C5 ", 120), music.PlaybackMode.LoopingInBackground)
+	
 })
